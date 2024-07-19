@@ -2,6 +2,11 @@ var cols = 5;
 var rows = 5;
 var grid = new Array(cols);
 
+var openSet = [];
+var closedSet = [];
+var start;
+var end;
+
 function Spot(){
     this.f = 0;
     this.g = 0;
@@ -21,8 +26,19 @@ function setup(){
             grid[i][j] = new Spot();
         }
     }
+
+    start = grid[0][0];
+    end = grid[cols - 1][rows - 1];
+
+    openSet.push(start);
 }
 
 function draw(){
+    
+    if(openSet.length > 0){
+
+    } else {
+
+    }
     background(0);
 }
